@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #0004ff;
+  text-decoration: none;
+}
+
+/* サブメニュー */
+.sub-menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgb(0, 255, 255);
+  padding: 10px 0;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+/* ヘッダーメニューをページの最上部に固定 */
+.header-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(0, 255, 255);
+  padding: 10px 0;
+  z-index: 999;
+}
+
+/* タイトルボックス（h1の見た目を維持しつつメニューの下に配置） */
+.title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 30px;
+  padding: 80px 40px 40px; /* メニューの高さ分だけ上の余白を確保 */
+  min-height: 25vh;
+}
+
+.content {
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.root-box {
+  width: 90%;
+}
+
+.main-flex {
+  display: flex;
+  gap: 20px;
+}
+
+.left-panel, .right-panel {
+  width: 20%;
+}
+
+.main-panel {
+  width: 60%;
+  text-align: center;
+}
+
+.admins {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* スライドさせる部分以外は隠す */
+}
+
+.admin-slide {
+  display: flex;
+  transition: transform 0.5s ease; /* スライドのアニメーション */
+}
+
+.admin {
+  flex: 0 0 100%; /* 1つのadminが100%の幅を占める */
+  text-align: center;
+}
+
+.admin img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.prev-admin {
+  left: 10px; /* 左側に配置 */
+}
+
+.next-admin {
+  right: 10px; /* 右側に配置 */
+}
+
+button:hover {
+  color: #007bff;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul li a:hover {
+  color: #007bff;
+}
